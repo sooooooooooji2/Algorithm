@@ -8,7 +8,7 @@ public class Main1 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+//        StringBuilder sb = new StringBuilder();
 
         String allStr = br.readLine().toUpperCase();
         char findStr = br.readLine().toUpperCase().charAt(0);
