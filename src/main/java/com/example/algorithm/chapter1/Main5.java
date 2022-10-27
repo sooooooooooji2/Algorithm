@@ -12,22 +12,30 @@ public class Main5 {    //(오류뜸)
         StringBuilder sb = new StringBuilder();
 
         char[] arrStr = str.nextToken().toCharArray();
-        char[] newArrStr = new char[arrStr.length];
-        int leng = arrStr.length - 1;
+        int le = 0, ri = arrStr.length - 1;
+        char temp ;
 
-        for(int i = 0 ; i < arrStr.length; i++){
-            if(Character.isLetter(arrStr[i])){
-                newArrStr[leng-i] = arrStr[i];
-            }else{
-                newArrStr[i] = arrStr[i];
+        for(le = 0 ; le < arrStr.length; le++){
+//            System.out.println("le = " + le + "/ ri = " + ri
+//                    + "/arr[le] = " + arrStr[le]+ " /ri = " + arrStr[ri]);
+            if(le >= ri) break;
+            if(Character.isAlphabetic(arrStr[le])
+             && Character.isAlphabetic(arrStr[ri])){
+                temp = arrStr[le];
+                arrStr[le] = arrStr[ri];
+                arrStr[ri] = temp;
             }
+            ri--;
         }
 
-        for (char c : newArrStr){
+        for (char c : arrStr){
             System.out.print(c);
         }
     }
 }
+//kqQdj#@kd#g%$#kdj&&gk@kd$dQGk 입력
+//kGQdd#@kk#g%$#jdk&&gd@kj$dQqk 정답
+
 
 //[문제]
 //영어 알파벳과 특수문자로 구성된 문자열이 주어지면 영어 알파벳만 뒤집고, 특수문자는 자기 자리에 그대로 있는 문자열을 만들어 출력하는 프로그램을 작성하세요.
