@@ -33,7 +33,7 @@ public class Main1 {
                 temp = arrNum[i];
                 result += arrNum[i] + " ";
             }else {
-                //#5. i번째 배열이 더 작으면 : temp값만 교체
+                //#5. i번째 배열이료 더 작으면 : temp값만 교체
                 temp = arrNum[i];
             }
         }
